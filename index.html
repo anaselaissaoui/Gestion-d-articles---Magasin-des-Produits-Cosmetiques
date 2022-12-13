@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./javascript.js" defer></script>
+    <title>Formulaire Des Produits</title>
+</head>
+<body>
+    <section id="container">
+        <form id="productsListForm"  onsubmit="return false">
+            <h1>Formulaire Des Produits</h1>
+            <hr>
+            <div id="nomSec" class="part">
+                <label for="nom">Nom:</label>
+                <input type="text" name="nom" id="nomInp">
+                <p id="nomMsg"></p>
+            </div>
+            <div id="marqueSec" class="part">
+                <label for="marque">Marque:</label>
+                <input type="text" name="marque" id="marqueInp">
+                <p id="marqueMsg"></p>
+            </div>
+            <div id="prixSec" class="part">
+                <label for="prix">Prix : </label>
+                <input type="text" name="prix" id="prixInp">
+                <p id="prixMsg"></p>
+            </div>
+            <div id="dateSec" class="part">
+                <label for="date">Date de production :</label>
+                <input type="date" name="date" id="dateInp">
+                <p id="dateMsg"></p>
+            </div>
+            <div id="typeSec" class="part">
+                <label for="type">Type :</label>
+                <select name="type" id="typeInp">
+                    <option value="">--Veuillez choisir une option--</option>
+                    <option value="Hygiène et Toilette">Hygiène et Toilette</option>
+                    <option value="Soins Esthétiques">Soins Esthétiques</option>
+                    <option value="Produits Solaires">Produits Solaires</option>
+                    <option value="Beauté des Mains et des Pieds">Beauté des Mains et des Pieds</option>
+                    <option value="Produits de Maquillage">Produits de Maquillage</option>
+                    <option value="Entretien Capillaires">Entretien Capillaires</option>
+                    <option value="Parfums">Parfums</option>
+                </select>
+                <p id="selectMsg"></p>
+            </div>
+            <div id="promotionSec">
+                <label for="promotion">Promotion :</label>
+                <div id="promotionOption">
+                    <input type="radio" name="promotion" id="ouiOption" value="Oui">
+                    <label for="ouiOption">Oui</label>
+                    <input type="radio" name="promotion" id="nonOption" value="Non">
+                    <label for="nonOption">Non</label>
+                </div>
+                <p id="promotionMsg"></p>
+            </div>
+            <button value="ajouter" id="ajouter">Ajouter</button>
+            <button value="modifier" id="modifier">Modifier</button>
+            <p id="error"></p>
+        </form>
+    </section>
+    <section id="details">
+        <div id="detailsMsg">
+            <h2>Details</h2>
+            <p>Vous êtes sur le point d'ajouter cet article :</p>
+            <div id="listDetails"></div>
+            <button id="confirmer">Confirmer</button>
+        </div>
+    </section>
+    <section id="deletesec">
+        <div id="deletemsg">
+            <h2>Alerte</h2>
+            <p>Vous êtes sur le point de supprimer cet article :</p>
+            <button id="supprimer">Supprimer</button>
+            <button id="annuler">Annuler</button>
+        </div>
+    </section>
+    
+    <section id="section2">
+        <table id="tb">
+         <tr class="tbl-header">
+            <th>Nom</th>
+            <th>Marque </th>
+            <th>Prix </th>
+            <th>Date </th>
+            <th>Type</th>
+            <th>Promotion </th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+        <tr>
+            <tbody id="tbody"></tbody>
+        </tr>
+        </table>
+    </section>
+    
+</body>
+</html>
